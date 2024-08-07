@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आदर्श गौतम का जन्मदिन</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>नमस्कार दोस्तों!</h1>
+        <p>2 लाख लोगों को फ्री में रिचार्ज दिया जा रहा है क्योंकि 09/06/2024 को आदर्श गौतम का जन्मदिन आ रहा है।</p>
+        <form id="phoneForm">
+            <input type="text" id="phoneNumber" placeholder="अपना नंबर डालें" required><br>
+            <button type="button" onclick="showOperatorSelection()">Next</button>
+        </form>
+        <div id="operatorSelection" style="display:none;">
+            <select id="operator">
+                <option value="">Choose your operator</option>
+                <option value="vodafone">Vodafone</option>
+                <option value="bsnl">BSNL</option>
+                <option value="jio">Jio</option>
+                <option value="airtel">Airtel</option>
+            </select><br>
+            <button type="button" onclick="showTargetLine()">Next</button>
+        </div>
+        <div id="targetLine" class="target-line" style="display:none;">
+            <p>Target Line: <span id="targetStatus">0%</span> completed</p>
+            <button onclick="shareOnWhatsApp()">WhatsApp पर शेयर करें</button>
+            <button id="doneButton" style="display:none;" onclick="showCongratulations()">Done</button>
+        </div>
+        <p id="congratulationsMessage" style="display:none;">बधाई हो आपको ₹699 का रिचार्ज गिफ्ट किया गया है! इसमें 30 मिनट का टाइम लग सकता है।</p>
+        <div class="comments">
+            <p>अपने घर वाले रिश्तेदारों और दोस्तों को भी बताएं।</p>
+            <p>अपने घर वालों को भी बताएं!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
